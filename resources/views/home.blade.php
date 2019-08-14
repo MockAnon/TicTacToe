@@ -29,6 +29,14 @@
                 <div class="panel-body">
                     <div class="list-group">
                         @foreach($users as $_user)
+                        <a class="list-group-item clearfix"> 
+                            <img class="img-circle img-responsive" src="https://www.gravatar.com/avatar/{{ md5($_user->email) }}?d=retro">
+                            <span class="user-info"> 
+                                {{ $_user->name }} <br>
+                                <small> Score: {{ $_user->score }}</small>
+                            </span>
+                        </a>
+                        @endforeach
                     </div>
                 </div>
             </div>
