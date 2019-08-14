@@ -24,6 +24,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
-        return view('home', compact('user'));
+        $users = User::paginate(5);
+        return view('home', compact('user', 'users'));
     }
 }
