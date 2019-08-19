@@ -5,7 +5,6 @@ use Illuminate\Database\Seeder;
 class UsersTableSeeder extends Seeder {
   public function run()
   {
-    factory(App\User::class, 100);
-    // $this->call(UsersTableSeeder::class);
+    factory(App\User::class, 100)->create();
   }
 }
