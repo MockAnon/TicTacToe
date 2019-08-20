@@ -35,6 +35,11 @@
                                 {{ $_user->name }} <br>
                                 <small> Score: {{ $_user->score }}</small>
                             </span>
+                            <form action="/new-game" method="post">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="user_id" value={{$_user->id}}>
+                                <button type="submit" class="btn btn-primary pull-right"> Play </button>
+                            </form>
                         </a>
                         @endforeach
                     </div>
@@ -45,3 +50,8 @@
     </div>
 </div>
 @endsection
+
+<script>
+
+
+<script>
